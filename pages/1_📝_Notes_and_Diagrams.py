@@ -8,6 +8,7 @@ from utils import (
 )
 import json
 import time
+import pymupdf
 
 st.set_page_config(page_title="Notes & Diagrams", page_icon="📝", layout="wide")
 st.title("📝 Notes Management & Diagram Analysis")
@@ -56,7 +57,7 @@ if uploaded_notes_file is not None:
             if pdf_bytes:
                 # Extract text
                 try:
-                    doc = fitz.open(stream=pdf_bytes, filetype="pdf") # PyMuPDF needs stream of bytes for type='pdf'
+                    doc = pymupdf.open(stream=pdf_bytes, filetype="pdf") # PyMuPDF needs stream of bytes for type='pdf'
                     full_text = "".join([page.get_text() for page in doc])
                     doc.close()
                     st.session_state.nd_current_notes_text = full_text
