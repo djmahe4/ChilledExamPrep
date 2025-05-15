@@ -10,7 +10,8 @@ import time
 import functools
 import cv2
 import os
-os.popen("pip3 install torch==1.9.0+cpu torchvision==0.10.0+cpu -f https://download.pytorch.org/whl/torch_stable.html")
+os.popen("pip uninstall opencv-python &&
+pip install opencv-python-headless")
 from ultralytics import YOLO
 
 
