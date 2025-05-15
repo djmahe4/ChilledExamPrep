@@ -23,7 +23,7 @@ You can try out the live version of this application (running on Python 3.10) he
   - **AI-Powered Q&A:** Ask questions about your notes and get answers from Gemini.
   - **Diagram Detection & Explanation (YOLOv8):**
     - Automatically extracts images from PDF notes.
-    - Utilizes a [YOLO model](https://github.com/abinthm/Diagram-extractor-model/blob/main/runs/detect/train/weights/best.pt) (`diagram_det.pt` or default `yolov8n.pt`) to identify potential diagrams.
+    - Utilizes a [YOLO model](https://github.com/abinthm/Diagram-extractor-model/blob/main/runs/detect/train/weights/best.pt) (`diagram_det.pt`) to identify potential diagrams.
     - Performs OCR on detected diagrams to extract text.
     - Uses Gemini to explain concepts from diagrams.
   - **Downloadable Data:** Export processed notes text and diagram information in JSON format for training or analysis.
