@@ -8,7 +8,7 @@ import io
 import json
 import time
 import functools
-import cv2
+#import cv2
 import os
 os.popen("pip uninstall opencv-python &&
 pip install opencv-python-headless")
