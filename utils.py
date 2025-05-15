@@ -8,6 +8,7 @@ import io
 import json
 import time
 import functools
+import cv2
 from ultralytics import YOLO
 import os # For checking model file existence
 
