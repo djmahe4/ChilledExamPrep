@@ -52,7 +52,7 @@ def retry(retries=3, delay=5, backoff=2):
     return decorator
 
 @retry(retries=3, delay=5)
-def get_gemini_response(prompt_text, model_name="gemini-1.5-flash-latest"):
+def get_gemini_response(prompt_text, model_name="gemini-2.0-flash"):
     """Gets response from Gemini API with retry logic."""
     if not st.session_state.get("api_key_configured", False):
         st.error("Gemini API key not configured. Please set it on the Home page.")
