@@ -10,8 +10,7 @@ import time
 import functools
 #import cv2
 import os
-os.popen("pip uninstall opencv-python &&
-pip install opencv-python-headless")
+os.popen("pip uninstall opencv-python && pip install opencv-python-headless")
 from ultralytics import YOLO
 
 
