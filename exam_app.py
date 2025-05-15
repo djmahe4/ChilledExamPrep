@@ -3,7 +3,7 @@ import streamlit as st
 from utils import configure_api_key, load_yolo_model # Import necessary functions from utils
 
 st.set_page_config(
-    page_title="Gemini Study Hub - Home",
+    page_title="ChilledExamPrep - Home",
     page_icon="🏠",
     layout="wide"
 )
