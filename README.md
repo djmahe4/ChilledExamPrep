@@ -40,7 +40,7 @@ You can try out the live version of this application (running on Python 3.10) he
 
 - **Streamlit:** Interactive web app framework.
 - **Python 3.10:** (for online deployment)
-- **Gemini API (Google Generative AI):** Model used - `gemini-1.5-flash`
+- **Gemini API (Google Generative AI):** Model used - `gemini-2.0-flash`
 - **Ultralytics YOLOv8:** For object detection
   - GitHub: [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 - **PyMuPDF (fitz):** PDF parsing and image extraction
