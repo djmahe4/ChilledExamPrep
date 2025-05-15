@@ -1,7 +1,7 @@
 # pages/2_📜_Question_Papers.py
 import streamlit as st
 from utils import load_text_data, load_pdf_data, get_gemini_response
-import fitz # For PDF text extraction directly here as it's simple
+import pymupdf # For PDF text extraction directly here as it's simple
 
 st.set_page_config(page_title="Question Papers", page_icon="📜", layout="wide")
 st.title("📜 Question Papers Chat")
@@ -38,7 +38,7 @@ if uploaded_qp_file is not None:
             pdf_bytes = load_pdf_data(file_content_bytes, uploaded_qp_file.name)
             if pdf_bytes:
                 try:
-                    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+                    doc = pymupdf.open(stream=pdf_bytes, filetype="pdf")
                     st.session_state.qp_current_text = "".join([page.get_text() for page in doc])
                     doc.close()
                 except Exception as e:
