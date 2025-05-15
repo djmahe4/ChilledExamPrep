@@ -301,7 +301,7 @@ st.sidebar.header("🔑 API & Model Configuration")
 api_key = st.sidebar.text_input("Enter your Gemini API Key:", type="password", key="api_key_input_main")
 yolo_model_name = st.sidebar.selectbox(
     "Select YOLO Model",
-    ("yolov8n.pt", "yolov8s.pt", "None (Disable Diagram Detection)"), # Add more if needed, ensure they are downloadable by ultralytics
+    ("diagram_det.pt", "None (Disable Diagram Detection)"), # Add more if needed, ensure they are downloadable by ultralytics
     index=0, key="yolo_model_select"
 )
 # Add options for diagram detection heuristic
