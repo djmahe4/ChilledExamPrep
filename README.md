@@ -40,7 +40,7 @@ You can try out the live version of this application (running on Python 3.10) he
 
 - **Streamlit:** Interactive web app framework.
 - **Python 3.10:** (for online deployment)
-- **Gemini API (Google Generative AI):** Model used - `gemini-1.5-flash-latest`
+- **Gemini API (Google Generative AI):** Model used - `gemini-1.5-flash`
 - **Ultralytics YOLOv8:** For object detection
   - GitHub: [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 - **PyMuPDF (fitz):** PDF parsing and image extraction
@@ -106,29 +106,29 @@ Open the app in your browser and enter your Gemini API key.
 
 ## 💡 Future Enhancements / To-Do
 
-[ ] Pomodoro timer with browser notifications & sound
+- [ ] Pomodoro timer with browser notifications & sound
 
-[ ] Graphical mindmap using streamlit-agraph or JS
+- [ ] Graphical mindmap using streamlit-agraph or JS
 
-[ ] Error handling & logging improvements
+- [ ] Error handling & logging improvements
 
-[ ] Save/load full study sessions (files, chats)
+- [ ] Save/load full study sessions (files, chats)
 
-[ ] Tag/categorize notes and diagrams
+- [ ] Tag/categorize notes and diagrams
 
-[ ] Document/chat summarization
+- [ ] Document/chat summarization
 
-[ ] User accounts & persistent storage
+- [ ] User accounts & persistent storage
 
-[ ] JSON-to-NN pipeline examples (Colab, etc.)
+- [ ] JSON-to-NN pipeline examples (Colab, etc.)
 
-[ ] Diagram explanation feedback loop
+- [ ] Diagram explanation feedback loop
 
-[ ] Gemini prompting fine-tuning for diagrams
+- [ ] Gemini prompting fine-tuning for diagrams
 
-[ ] Performance optimization for large PDFs
+- [ ] Performance optimization for large PDFs
 
-[ ] Theme customization options
+- [ ] Theme customization options
 
 
 ## Acknowledgements
