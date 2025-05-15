@@ -143,7 +143,8 @@ def display_pomodoro():
         st.session_state.pomo_timer_seconds = 25 * 60
     if 'pomo_break_time' not in st.session_state:
         st.session_state.pomo_break_time = False
-
+    if 'model_name' not in st.session_state:
+            st.session_state.model_name="diagram_det.pt"
     # Button to start/pause work session
     if st.button("Start/Pause Pomodoro (25 min Work)" if not st.session_state.pomo_timer_active else "Pause Pomodoro", key="pomodoro_toggle_work"):
         st.session_state.pomo_timer_active = not st.session_state.pomo_timer_active
@@ -304,6 +305,7 @@ yolo_model_name = st.sidebar.selectbox(
     ("diagram_det.pt", "None (Disable Diagram Detection)"), # Add more if needed, ensure they are downloadable by ultralytics
     index=0, key="yolo_model_select"
 )
+st.session_state.model_name=yolo_model_name
 # Add options for diagram detection heuristic
 yolo_conf_thresh = st.sidebar.slider("YOLO Confidence Threshold", 0.1, 0.9, 0.25, 0.05, key="yolo_conf")
 yolo_min_objs = st.sidebar.slider("Min Objects to Flag as Diagram", 1, 10, 3, 1, key="yolo_min_obj")
@@ -321,13 +323,13 @@ else:
 
 yolo_model_instance = None
 if api_configured_success: # Only load YOLO if API is fine (or make independent)
-    if yolo_model_name != "None (Disable Diagram Detection)":
-        with st.spinner(f"Loading YOLO model '{yolo_model_name}'... This may take time on first run."):
-            yolo_model_instance = load_yolo_model(yolo_model_name)
+    if st.session_state.model_name != "None (Disable Diagram Detection)":
+        with st.spinner(f"Loading YOLO model '{st.session_state.model_name}'... This may take time on first run."):
+            yolo_model_instance = load_yolo_model(st.session_state.model_name)
         if yolo_model_instance:
-            st.sidebar.success(f"YOLO model '{yolo_model_name}' loaded.")
+            st.sidebar.success(f"YOLO model '{st.session_state.model_name}' loaded.")
         else:
-            st.sidebar.error(f"Could not load YOLO model '{yolo_model_name}'. Diagram detection will be impaired.")
+            st.sidebar.error(f"Could not load YOLO model '{st.session_state.model_name}'. Diagram detection will be impaired.")
     else:
         st.sidebar.info("YOLO-based diagram detection is disabled.")
 
