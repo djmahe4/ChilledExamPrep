@@ -10,7 +10,7 @@ import time
 import functools
 #import cv2
 import os
-os.popen("pip uninstall opencv-python && pip install opencv-python-headless")
+os.popen("sudo apt update && sudo apt install -y libgl1")
 from ultralytics import YOLO
 
 
