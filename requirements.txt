@@ -1,0 +1,6 @@
+google-generativeai 
+Pillow 
+PyMuPDF 
+pytesseract 
+ultralytics 
+numpy
