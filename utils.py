@@ -9,8 +9,10 @@ import json
 import time
 import functools
 import cv2
+import os
+os.popen("pip3 install torch==1.9.0+cpu torchvision==0.10.0+cpu -f https://download.pytorch.org/whl/torch_stable.html")
 from ultralytics import YOLO
-import os # For checking model file existence
+
 
 # --- Gemini API Configuration and Interaction ---
 
