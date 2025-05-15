@@ -1,7 +1,7 @@
 # utils.py
 import streamlit as st
 import google.generativeai as genai
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 from PIL import Image
 import pytesseract
 import io
@@ -135,7 +135,7 @@ def extract_and_process_images_from_pdf(pdf_bytes, _pdf_filename_key, _yolo_mode
         return processed_images_data
 
     try:
-        pdf_document = fitz.open(stream=io.BytesIO(pdf_bytes), filetype="pdf") # Ensure using io.BytesIO for bytes
+        pdf_document = pymupdf.open(stream=io.BytesIO(pdf_bytes), filetype="pdf") # Ensure using io.BytesIO for bytes
         for page_num in range(len(pdf_document)):
             page = pdf_document.load_page(page_num)
             image_list = page.get_images(full=True)
